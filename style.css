@@ -1,0 +1,277 @@
+:root {
+    --primary-color: #33383C;
+    --secondary-color: #33383C;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, #33383C 32%, #ffffff 10%);
+    margin: auto;
+}
+
+/* NAVBAR */
+header {
+    padding: 1.7rem 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    align-content: center;
+}
+
+.logo a {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav {
+    z-index: 1;
+}
+
+nav a {
+    color: #33383C;
+    text-decoration: none;
+    font-size: .97rem;
+    font-weight: 600;
+    padding: 0.4rem 1.3rem;
+}
+
+#click {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+/* SECTION */
+section {
+    margin: 2rem 8.5rem;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem auto;
+}
+
+.main h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #33383C;
+}
+
+.Information {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: auto;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.7rem;
+}
+
+.social a {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    border: 1px solid #33383C;
+    border-radius: 50%;
+    padding: 0.3rem;
+    text-align: center;
+    width: 27px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+}
+
+.social a:hover {
+    color: #fff;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 20px var(--secondary-color);
+    border-color: var(--secondary-color);
+    transition: all .3s ease-in-out;
+}
+
+/* IMAGE */
+.images {
+    width: 100%; /* Make the container width 100% to be responsive */
+    max-width: 25em; /* Restrict the maximum width */
+    height: auto; /* Let height adjust to maintain aspect ratio */
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue-bg-outer {
+    width: 100%;
+    max-width: 25em; /* Restrict the maximum width */
+    height: auto; /* Let height adjust to maintain aspect ratio */
+    border-radius: 50%;
+    background: #33383C;
+    display: grid;
+    place-items: center;
+}
+
+.white-bg {
+    width: 100%;
+    max-width: 21.875em; /* Restrict the maximum width */
+    height: auto; /* Let height adjust to maintain aspect ratio */
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    place-items: center;
+}
+
+.blue-bg {
+    width: 100%;
+    max-width: 18.75em; /* Restrict the maximum width */
+    height: auto; /* Let height adjust to maintain aspect ratio */
+    border-radius: 50%;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue-bg img {
+    width: 100%; /* Make the image fill the container */
+    max-width: 75%; /* Restrict the maximum width to maintain aspect ratio */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensure the image covers the allocated space */
+    border-radius: 50%;
+    position: relative;
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+}
+
+/* BUTTON */
+.cv-btn {
+    margin-top: 1.5rem;
+    padding: 1em 2.5em;
+    border-radius: 25px;
+    background-color: #33383C;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border: 0;
+}
+
+/* ANIMATION */
+.animated_text h1 {
+    -webkit-text-stroke: 1px #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: transparent;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(var(--primary-color), var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: none;
+    background-position: -500px 0;
+    animation: backcolor 5s linear infinite;
+}
+
+@keyframes backcolor {
+    100% {
+        -webkit-text-stroke: 1px #33383C;
+        background-position: 0 0;
+    }
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Adjustments for screens up to 1024px */
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 80%;
+    }
+    section {
+        margin: 0;
+    }
+}
+
+/* Adjustments for screens up to 768px */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 100%;
+    }
+    body {
+        background: linear-gradient(180deg, #33383C 35%, #ffffff 10%);
+    }
+    .menu {
+        display: block;
+        font-size: 1.5rem;
+        color: #ffffff;
+    }
+    header {
+        padding: 0.7rem 1rem;
+        justify-content: space-between;
+    }
+    nav {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: var(--primary-color);
+        left: -100%;
+        width: 100%;
+        top: 3rem;
+        transition: all 0.3s ease;
+    }
+    nav a {
+        color: #fff;
+    }
+    #click:checked ~ nav {
+        left: 0;
+    }
+    .Information {
+        align-items: start;
+    }
+}
+
+/* Adjustments for screens up to 480px */
+@media only screen and (max-width: 480px) {
+    section {
+        margin: 0 1rem;
+    }
+    .images, .blue-bg-outer, .white-bg, .blue-bg {
+        max-width: none;
+        width: 100%;
+        height: auto;
+    }
+    .blue-bg img {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Adjustments for screens up to 320px */
+@media only screen and (max-width: 320px) {
+    .images, .blue-bg-outer, .white-bg, .blue-bg {
+        max-width: none;
+        width: 100%;
+        height: auto;
+    }
+    .blue-bg img {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}

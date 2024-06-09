@@ -1,0 +1,97 @@
+/* Existing CSS styles remain unchanged */
+
+.contact {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(41, 212, 118, 0.84); /* Adjusted color opacity for shadow */
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%; /* Fluid width to adapt to screen size */
+}
+
+/* Responsive adjustments for .contact */
+@media (min-width: 600px) {
+    .contact {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact {
+        margin-left: 100px;
+        margin-right: 100px;
+        max-width: 600px; /* Limiting width on larger screens */
+    }
+}
+
+h2 {
+    font-size: 1.5rem; /* Use rem units for better scaling */
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments for h2 */
+@media (min-width: 600px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1rem; /* Use rem units for better scaling */
+}
+
+/* Responsive adjustments for li */
+@media (min-width: 600px) {
+    li {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    li {
+        font-size: 1.5rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+a:hover {
+    color: #0056b3; /* Darker shade for hover effect */
+}
+
+/* Additional styles for smaller screens */
+@media (max-width: 599px) {
+    .contact {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    li {
+        font-size: 0.9rem;
+    }
+}

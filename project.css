@@ -1,0 +1,58 @@
+/* Global styles remain unchanged */
+
+/* Styles for the project details */
+.project-details {
+    border: 3px solid #ee0553;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Updated shadow for a more subtle effect */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    max-width: 90%; /* Fluid width for better responsiveness */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive adjustments for .project-details */
+@media (min-width: 600px) {
+    .project-details {
+        padding: 25px;
+    }
+}
+
+@media (min-width: 768px) {
+    .project-details {
+        max-width: 700px; /* Limit width on larger screens */
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+.project-details h2 {
+    font-size: 1.5rem; /* Use rem units for better scaling */
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments for h2 */
+@media (min-width: 600px) {
+    .project-details h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .project-details h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Additional small screen adjustments */
+@media (max-width: 599px) {
+    .project-details {
+        padding: 15px;
+    }
+
+    .project-details h2 {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+}
