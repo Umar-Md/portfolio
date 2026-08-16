@@ -9,7 +9,7 @@ const profile = {
   github: 'https://github.com/md-umar1',
   linkedin: 'https://www.linkedin.com/in/md-umar1/',
   instagram: 'https://instagram.com/_m_d_umar?igshid=aW9hZmx2YTExcDFx',
-  avatar: '/img.JPG',
+  avatar: './img.JPG',
 };
 
 const skills = [
